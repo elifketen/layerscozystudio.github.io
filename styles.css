@@ -1,0 +1,211 @@
+/*— Basic Reset & Global Styles —*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  }
+  html {
+	font-size: 16px;
+	scroll-behavior: smooth;
+  }
+  body {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.6;
+	color: #333;             /* Primary text color */
+	background-color: #fdfdfd;/* Page background */
+  }
+  
+  /*— Container Utility —*/
+  .container {
+	width: 90%;
+	max-width: 1000px;
+	margin: 0 auto;
+  }
+  
+  /*— Navbar / Header —*/
+  .site-header {
+	position: sticky;
+	top: 0;
+	background-color: #ffffff;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	z-index: 100;
+  }
+  .nav-bar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 0;
+  }
+  .nav-logo {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.25rem;
+	font-weight: 700;
+	color: #333;
+	text-decoration: none;
+  }
+  .nav-links {
+	list-style: none;
+	display: flex;
+  }
+  .nav-links li {
+	margin-left: 1.5rem;
+  }
+  .nav-links a {
+	color: #333;
+	text-decoration: none;
+	font-weight: 600;
+  }
+  .nav-links a:hover {
+	color: #e07a5f;  /* Accent hover color */
+  }
+  
+  /*— Hero Section —*/
+  .hero-section {
+	height: 100vh;                     /* Full viewport height */
+	background: url('images/hero-bg.jpg') center/cover no-repeat;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: #ffffff;
+	position: relative;
+  }
+  .hero-section::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
+  }
+  .hero-content {
+	position: relative;
+	z-index: 1;
+	max-width: 600px;
+  }
+  .hero-content h1 {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 3rem;
+	margin-bottom: 0.5rem;
+  }
+  .hero-content p {
+	font-size: 1.25rem;
+	margin-bottom: 1.25rem;
+  }
+  .btn-primary {
+	background-color: #e07a5f; /* Your primary accent */
+	color: #ffffff;
+	padding: 0.75rem 1.5rem;
+	border: none;
+	border-radius: 4px;
+	font-weight: 600;
+	text-decoration: none;
+  }
+  .btn-primary:hover {
+	background-color: #cf684d; /* Slightly darker on hover */
+  }
+  
+  /*— Section Headings —*/
+  section h2 {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 2rem;
+	text-align: center;
+	margin-bottom: 1rem;
+	color: #333;
+  }
+  section p {
+	margin-bottom: 1rem;
+	color: #555;
+  }
+  
+  /*— About Section —*/
+  .about-section {
+	padding: 4rem 0;
+  }
+  .strengths-list {
+	list-style: disc inside;
+	margin-top: 1rem;
+	margin-left: 1rem;
+  }
+  .strengths-list li {
+	margin-bottom: 0.5rem;
+  }
+  
+  /*— Portfolio Section —*/
+  .portfolio-section {
+	background-color: #ffffff;
+	padding: 4rem 0;
+  }
+  .grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 2rem;
+	margin-top: 2rem;
+  }
+  .proj-item img {
+	width: 100%;
+	height: auto;
+	border-radius: 4px;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  .proj-item h3 {
+	margin-top: 0.75rem;
+	font-size: 1.25rem;
+	color: #333;
+  }
+  .proj-item p {
+	margin-top: 0.5rem;
+	color: #555;
+  }
+  
+  /* Two-column grid on tablets and up */
+  @media (min-width: 768px) {
+	.grid {
+	  grid-template-columns: repeat(2, 1fr);
+	}
+  }
+  
+  /*— Services Section —*/
+  .services-section {
+	padding: 4rem 0;
+  }
+  .services-list {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 2rem;
+  }
+  .services-list li {
+	background-color: #f4f4f4;
+	margin: 0.5rem;
+	padding: 1rem 1.5rem;
+	border-radius: 4px;
+	font-weight: 600;
+	color: #333;
+  }
+  
+  /*— Contact Section —*/
+  .contact-section {
+	background-color: #ffffff;
+	padding: 4rem 0;
+  }
+  .contact-section a {
+	color: #e07a5f;
+	text-decoration: none;
+	font-weight: 600;
+  }
+  .contact-section a:hover {
+	text-decoration: underline;
+  }
+  
+  /*— Footer —*/
+  .site-footer {
+	background-color: #333;
+	color: #ffffff;
+	text-align: center;
+	padding: 2rem 0;
+	margin-top: 2rem;
+  }
+  .site-footer p {
+	font-size: 0.9rem;
+  }
+  
